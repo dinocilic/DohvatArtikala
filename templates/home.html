@@ -1,0 +1,61 @@
+{% extends "layout/layout.html" %}
+{% block content %}
+
+
+<header class="jumbotron header">
+    <div class="header-info container">
+      <h1 class="display-3 header-info text-center">
+        Tomsoft d.o.o.
+      </h1>
+      <p class="lead header-text text-center p-2">
+        Luceed pretvara podatke u informacije!
+      </p>
+    </div>
+  </header>
+
+  <div class="search-box">
+    <div class="search-top">
+      <h1 class="search-text text-center">
+        Unesite naziv traženog artikla u polje ispod
+      </h1>
+      <div class="search-funkcije">
+        <form method="GET">
+          <input type="text" name="query" class="input">
+          <button class="btn btn-success" type="submit">Pošalji</button>
+        </form>
+      </div>
+    </div>
+  </div>
+   
+  <div class="artikli">
+    <div class="top-artikli">
+      <h4 class="text-center top-info fw-bold">Top Artikli: </h4>
+      <div class="row">
+        {% for data in podaci %}
+            {% for artikal in data['artikli'] %}
+              <div class="col-3">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title fw-bold"> {{ artikal['naziv'] }}  </h4>
+                    <hr>
+                    <p class="card-text">
+                      <span class="fw-bold">Šifra Artikla:</span> {{ artikal['artikl'] }}<br>
+                      <span class="fw-bold">Cijena:</span>  {{ artikal['vpc']}} <br>
+                      <span class="fw-bold">Stanje:</span> {{ artikal['stanje']}} <br>
+                    </p>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="../static/images/tomsoft_logo.PNG" alt="">
+    </div>
+  </footer>
+
+{% endblock %}

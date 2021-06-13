@@ -1,0 +1,78 @@
+body {
+    height: 100%;
+    width: 100%;
+  }
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+  }
+  .container-fluid, .row {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card {
+    height: 100%;
+    background-color: #f4f4f4;
+    box-shadow: 5px 5px gainsboro;
+  }
+  .card .card-title {
+    min-height: 50%;
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+  .header {
+    background-color: #153245;
+    color: #f4f4f4;
+    height: 300px;
+  }
+  
+  .header .header-info {
+    padding-top: 50px;
+  }
+
+  .top-artikli .top-info {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  
+  .search-box {
+    position: relative;
+    margin-top: 5%;
+  }
+
+  .search-box form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .search-funkcije {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-funkcije .input {
+    width: 30%;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2px 1px black;
+  }
+
+  .col-3 {
+    padding: 5px;
+  }
+  
+  .footer {
+    margin-top: 50px;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+  }
+  .footer .footer-logo img {
+    height: 100px;
+  }
